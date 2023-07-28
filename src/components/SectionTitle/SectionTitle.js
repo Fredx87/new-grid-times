@@ -1,6 +1,7 @@
 import React from 'react';
 
 import styled from 'styled-components/macro';
+import { QUERIES } from '../../constants';
 
 const SectionTitle = ({ children, cornerLink }) => {
   return (
@@ -26,6 +27,10 @@ const Title = styled.h2`
   font-weight: var(--font-weight-bold);
   font-size: 1.5rem;
   margin-bottom: 1rem;
+
+  @media ${QUERIES.laptopAndUp} {
+    margin-top: -6px;
+  }
 `;
 
 const CornerLink = styled.a`
